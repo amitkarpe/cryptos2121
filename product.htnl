@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add any additional meta tags or stylesheets here -->
+</head>
+<body>
+  <!-- Add your content or other HTML elements here -->
+
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1ND9vLEexjoyXjpN2YHuZgSO"
+publishable-key="pk_live_51Ll5OZEexjoyXjpNiXUzS1yoPVIQ2h956XSlZaO3PQ4N2EnuTHRfv9pNgXlDimiX1ZTODnGZT7FB94vK9xqAm0DX00miyYoSFc">
+</stripe-pricing-table>
+  
+  <!-- Add any additional scripts or JavaScript code here -->
+</body>
+</html>
