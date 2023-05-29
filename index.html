@@ -6,10 +6,20 @@
 <body>
   <!-- Add your content or other HTML elements here -->
   
-<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<stripe-pricing-table pricing-table-id="prctbl_1ND2LaEexjoyXjpN3aKLoP4n"
-publishable-key="pk_live_51Ll5OZEexjoyXjpNiXUzS1yoPVIQ2h956XSlZaO3PQ4N2EnuTHRfv9pNgXlDimiX1ZTODnGZT7FB94vK9xqAm0DX00miyYoSFc">
-</stripe-pricing-table>
+  <script>
+    // Get the user's IP address.
+    var ip = navigator.geolocation.ip;
+
+    // Look up the user's location in a database.
+    var location = geoip.lookup(ip);
+
+    // Redirect the user to the appropriate HTML file.
+    if (location.country === "India") {
+      window.location = "india.html";
+    } else if (location.country === "Singapore") {
+      window.location = "singapore.html";
+    }
+  </script>
   
   <!-- Add any additional scripts or JavaScript code here -->
 </body>
