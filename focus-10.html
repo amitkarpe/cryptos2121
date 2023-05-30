@@ -6,38 +6,11 @@
 <body>
   <!-- Add your content or other HTML elements here -->
   
-  <script>
-// Get the public portfolio
-const portfolio = fetch('https://api.coingecko.com/api/v3/portfolios/public/focus30')
-  .then(response => response.json())
-  .catch(error => console.error(error));
 
-// Iterate over the coins in the portfolio
-portfolio.coins.forEach(coin => {
-  // Create a new <tr> element
-  const row = document.createElement('tr');
+<!-- https://www.coingecko.com/en/widgets/coin_list_widget  -->
+<script src="https://widgets.coingecko.com/coingecko-coin-list-widget.js"></script>
+<coingecko-coin-list-widget  coin-ids="ethereum,binancecoin,solana,polkadot,avalanche-2,matic-network,uniswap,chainlink,arbitrum,near" currency="usd" locale="en"></coingecko-coin-list-widget>
 
-  // Add the coin symbol to the <td> element
-  const symbolCell = document.createElement('td');
-  symbolCell.textContent = coin.symbol;
-  row.appendChild(symbolCell);
-
-  // Add the coin amount to the <td> element
-  const amountCell = document.createElement('td');
-  amountCell.textContent = coin.amount;
-  row.appendChild(amountCell);
-
-  // Add the coin price to the <td> element
-  const priceCell = document.createElement('td');
-  priceCell.textContent = coin.price;
-  row.appendChild(priceCell);
-
-  // Append the <tr> element to the table
-  document.getElementById('portfolioTable').appendChild(row);
-});
-
-  </script>
-  
   <!-- Add any additional scripts or JavaScript code here -->
 </body>
 </html>
